@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.firsttest">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Fruits"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.material.test.MainMaterialTestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.baid.lbsapi.API_KEY"
+            android:value="IDjGiS6GRHj3e8gCT2D5RZSban6Gh0Hy" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity android:name="com.example.lbs.test.MainLbsTestActivity" />
+
+        <service
+            android:name="com.example.service.bestpractice.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.example.service.bestpractice.MainServiceBestpracticeActivity" />
+
+        <service
+            android:name="com.example.service.test.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.example.service.test.MainServiceTestActivity" />
+        <activity android:name="com.example.androidthread.test.MainAndroidthreadTestActivity">
+
+        </activity>
+        <activity android:name="com.example.webview.test.MainWebviewTestActivity" />
+        <activity android:name="com.example.camera.album.test.MainCameraAlbumActivity" />
+        <activity android:name="com.example.notification.test.NotificationActivity" />
+        <activity android:name="com.example.notification.test.MainNotificationTestActivity" />
+        <activity android:name="com.example.provider.test.MainProviderTestActivity" />
+
+        <provider
+            android:name="com.example.Database.test.DaatabaseProvider"
+            android:authorities="com.example.Database.test.provide"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.example.contact.test.MainContactTestActivity" />
+        <activity android:name="com.example.runtime.permission.MainRuntimePermissionActivity" />
+        <activity android:name="com.example.litepal.test.MainLitepalTestActivity" />
+        <activity android:name="com.example.Database.test.MainDatabaseTestActivity" />
+        <activity android:name="com.example.broadcast.bestpractice.LoginActivity" />
+        <activity android:name="com.example.broadcast.bestpractice.MainBroadcastBestpracticeActivity" />
+        <activity android:name="com.example.broadcast.test2.MainActivity" />
+
+        <receiver
+            android:name="com.example.broadcast.test2.AnotherBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="com.example.broadcasttext.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.example.broadcast.test.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.example.broadcast.test.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.example.broadcast.test.MainBroadcastTestActivity" />
+        <activity android:name="com.example.fragment.best.practice.NewsContentActivity" />
+        <activity android:name="com.example.fragment.best.practice.MainActivity" />
+        <activity android:name="com.example.fragment.test.MainFragmentTestActivity" />
+        <activity android:name="com.example.ui.best.practice.MainUibestPracticeActivity" />
+        <activity android:name="com.example.recycler.test.MainActivity" />
+        <activity android:name="com.example.listview.test.MainActivity" />
+        <activity android:name="com.example.ui.custom.view.MainActivity" />
+        <activity android:name="com.example.ui.layout.MainActivity" />
+        <activity android:name="com.example.ui.widget.test.MainUiwidgettestActivity" />
+        <activity
+            android:name="com.example.activitylifecycletest.DialogActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="com.example.activitylifecycletest.NormalActivity" />
+        <activity android:name="com.example.activitylifecycletest.MainActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name="com.example.activitylifecycletest.BaseActivity" />
+    </application>
+
+</manifest>
